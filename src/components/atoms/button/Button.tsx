@@ -3,10 +3,10 @@ import { ProgressCircle } from '@/components/atoms/progress-circle/ProgressCircl
 import clsx from 'clsx'
 import styles from './Button.module.scss'
 
-export type ButtonVariant = 'primary' | 'secondary' | 'icon'
-export type ButtonWidth = 'full' | 'auto'
+type ButtonVariant = 'primary' | 'secondary' | 'icon'
+type ButtonWidth = 'full' | 'auto'
 
-export interface ButtonPropsWithVariant extends ButtonProps {
+interface ButtonPropsWithVariant extends ButtonProps {
   variant?: ButtonVariant
   width?: ButtonWidth
 }

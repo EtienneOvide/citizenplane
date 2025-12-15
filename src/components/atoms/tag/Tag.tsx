@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 type TagProps = {
   children: ReactNode
-  variant?: 'disabled'
+  variant?: 'disabled' | 'error' | 'success'
 }
 
 export const Tag = ({ children, variant }: TagProps) => {
