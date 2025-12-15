@@ -1,0 +1,32 @@
+.o-compare-flights-form {
+  display: flex;
+  flex-direction: column;
+  gap: ptr(16px);
+  padding: ptr(16px, 0);
+  @media #{$tablet} {
+    padding: ptr(24px, 0);
+  }
+
+  @media #{$desktop} {
+    padding: ptr(24, 0);
+  }
+
+  &__container {
+    padding: ptr(0, 16px);
+
+    @media #{$tablet} {
+      padding: ptr(0, 24px);
+    }
+
+    @media #{$desktop} {
+      padding: ptr(0, 32px);
+    }
+  }
+
+  &__separator {
+    width: 100%;
+    height: ptr(1px);
+    background-color: var(--grey-200);
+    border: 0;
+  }
+}

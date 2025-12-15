@@ -1,0 +1,35 @@
+.m-text-field{
+  display: flex;
+  flex-direction: column;
+  gap: ptr(8px);
+  
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: ptr(8px);
+  }
+  
+  &__label {
+    @include font($bodyBold);
+    color: var(--grey-700);
+  }
+
+  &__input {
+    width: 100%;
+    text-align: center;
+    padding: ptr(17px, 0);
+    border-radius: ptr(8px);
+    border: 1px solid var(--grey-200);
+    @include font($input);
+    letter-spacing: ptr(4px);
+    text-transform: uppercase;
+    &--error{
+      border-color: var(--red-500);
+    }
+  }
+
+  &__error {
+    color: var(--red-500);
+  }
+}

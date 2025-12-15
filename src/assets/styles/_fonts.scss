@@ -1,0 +1,59 @@
+@use 'sass:list';
+@use 'helpers' as *;
+
+$h1: (
+  font-weight: 700,
+  font-size: ptr(64px),
+  line-height: 100%,
+);
+$h2: (
+  font-weight: 700,
+  font-size: ptr(40px),
+  line-height: 100%,
+);
+$h3: (
+  font-weight: 700,
+  font-size: ptr(24px),
+  line-height: 100%,
+);
+$h4: (
+  font-weight: 700,
+  font-size: ptr(20px),
+  line-height: ptr(30px),
+);
+$body: (
+  font-weight: 400,
+  font-size: ptr(16px),
+  line-height: ptr(24px),
+);
+$bodyBold: (
+  font-weight: 700,
+  font-size: ptr(16px),
+  line-height: ptr(24px),
+);
+$bodyLight: (
+  font-weight: 400,
+  font-size: ptr(16px),
+  line-height: ptr(24px),
+);
+$button: (
+  font-weight: 500,
+  font-size: ptr(16px),
+  line-height: ptr(24px),
+);
+$input: (
+  font-weight: 400,
+  font-size: ptr(20),
+  line-height: ptr(24px),
+);
+$valid-typography: $h1, $h2, $h3, $h4, $body, $bodyBold, $bodyLight, $button, $input;
+
+@mixin font($typography: $body) {
+  @if not list.index($valid-typography, $typography) {
+    @error "#{$typography} is not a valid side. Expected one of #{valid-typography}.";
+  }
+
+  @each $property, $value in $typography {
+    #{$property}: $value;
+  }
+}

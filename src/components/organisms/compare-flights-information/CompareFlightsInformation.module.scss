@@ -1,0 +1,21 @@
+.o-compare-flights-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: ptr(16px);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: ptr(0, 16px);
+    background: var(--grey-100);
+    border-bottom: ptr(1px) solid var(--grey-200);
+  }
+
+  &__flight-numbers {
+    display: flex;
+    align-items: center;
+    gap: ptr(8px);
+  }
+}

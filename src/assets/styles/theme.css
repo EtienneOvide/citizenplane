@@ -1,0 +1,16 @@
+:root {
+  --white-900: #FFFFFF;
+  
+  --grey-100: #F9FAFC;;
+  --grey-200: #ECECEF;
+  --grey-500: #B2B2BD;
+  --grey-600: #8B8B9D;
+  --grey-700: #3E3E5B;
+
+  --purple-200: #9B90FF;
+  --purple-300: #7B6CFF;
+  --purple-500: #5341F9;
+  --purple-700: #3F30D6;
+  
+  --red-500: #FC5959;
+}

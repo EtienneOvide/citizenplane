@@ -1,0 +1,7 @@
+@use 'helpers' as *;
+
+$bp-tablet: ptr(768px);
+$bp-desktop: ptr(1024px);
+
+$tablet: 'screen and (min-width: #{$bp-tablet})';
+$desktop: 'screen and (min-width: #{$bp-desktop})';

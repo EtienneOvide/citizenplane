@@ -1,0 +1,82 @@
+[
+  {
+    "flight_id": 1,
+    "flight_number": "AF123",
+    "departure_date": "2025-01-10T08:30:00Z",
+    "arrival_date": "2025-01-10T10:45:00Z",
+    "origin": {
+      "id": 1,
+      "name": "Paris Charles de Gaulle",
+      "iata_code": "CDG"
+    },
+    "destination": {
+      "id": 2,
+      "name": "London Heathrow",
+      "iata_code": "LHR"
+    }
+  },
+  {
+    "flight_id": 2,
+    "flight_number": "LH456",
+    "departure_date": "2025-01-11T12:00:00Z",
+    "arrival_date": "2025-01-11T14:10:00Z",
+    "origin": {
+      "id": 3,
+      "name": "Frankfurt Airport",
+      "iata_code": "FRA"
+    },
+    "destination": {
+      "id": 4,
+      "name": "Madrid Barajas",
+      "iata_code": "MAD"
+    }
+  },
+  {
+    "flight_id": 3,
+    "flight_number": "IB789",
+    "departure_date": "2025-01-12T06:45:00Z",
+    "arrival_date": "2025-01-12T08:30:00Z",
+    "origin": {
+      "id": 4,
+      "name": "Madrid Barajas",
+      "iata_code": "MAD"
+    },
+    "destination": {
+      "id": 5,
+      "name": "Rome Fiumicino",
+      "iata_code": "FCO"
+    }
+  },
+  {
+    "flight_id": 4,
+    "flight_number": "KL321",
+    "departure_date": "2025-01-13T15:20:00Z",
+    "arrival_date": "2025-01-13T17:05:00Z",
+    "origin": {
+      "id": 6,
+      "name": "Amsterdam Schiphol",
+      "iata_code": "AMS"
+    },
+    "destination": {
+      "id": 1,
+      "name": "Paris Charles de Gaulle",
+      "iata_code": "CDG"
+    }
+  },
+  {
+    "flight_id": 5,
+    "flight_number": "AZ654",
+    "departure_date": "2025-01-14T09:10:00Z",
+    "arrival_date": "2025-01-14T11:50:00Z",
+    "origin": {
+      "id": 5,
+      "name": "Rome Fiumicino",
+      "iata_code": "FCO"
+    },
+    "destination": {
+      "id": 3,
+      "name": "Frankfurt Airport",
+      "iata_code": "FRA"
+    }
+  }
+]

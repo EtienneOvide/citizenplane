@@ -1,0 +1,9 @@
+.a-tag {
+  border-radius: ptr(4px);
+  padding: ptr(0, 4px);
+  &--disabled {
+    text-decoration: line-through;
+    background-color: var(--grey-200);
+    color: var(--grey-500);
+  }
+}

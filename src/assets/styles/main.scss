@@ -1,0 +1,11 @@
+@use './theme.css';
+@use './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+#root,
+body {
+  @include font($body);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Figtree', sans-serif;
+}

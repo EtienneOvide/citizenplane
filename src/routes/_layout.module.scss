@@ -1,0 +1,13 @@
+.l-layout {
+  padding: ptr(16px);
+
+  @media #{$tablet} {
+    padding: ptr(24px);
+  }
+
+  @media #{$desktop} {
+    padding: ptr(32px);
+    max-width: ptr(1200px);
+    margin: 0 auto;
+  }
+}
