@@ -6,6 +6,7 @@ interface CompareFlightsState {
   flightIdToCompare?: number // flight to compare
   setFlightId: (id?: number) => void
   setFlightIdToCompare: (id?: number) => void
+  resetFlights: () => void
 }
 
 const useCompareFlightsStore = create<CompareFlightsState>((set) => ({
@@ -13,6 +14,10 @@ const useCompareFlightsStore = create<CompareFlightsState>((set) => ({
   flightIdToCompare: undefined,
   setFlightId: (id?: number) => set({ flightId: id }),
   setFlightIdToCompare: (id?: number) => set({ flightIdToCompare: id }),
+  resetFlights: () => {
+    set({ flightIdToCompare: undefined })
+    set({ flightId: undefined })
+  },
 }))
 
 export default useCompareFlightsStore

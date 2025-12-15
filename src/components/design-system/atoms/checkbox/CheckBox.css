@@ -40,7 +40,7 @@
   }
 
   &[data-focus-visible] .checkbox {
-    outline: 2px solid var(--purple-700);
+    outline: 2px solid var(--purple-500);
     outline-offset: 2px;
   }
 
@@ -59,43 +59,6 @@
     svg {
       stroke-dashoffset: 44;
       stroke: var(--white-900);
-    }
-  }
-
-  &[data-indeterminate] {
-    & svg {
-      stroke: none;
-      fill: var(--checkmark-color);
-    }
-  }
-
-  &[data-invalid] {
-    .checkbox {
-      --checkmark-color: var(--gray-50);
-      border-color: var(--invalid-color);
-    }
-
-    &[data-pressed] .checkbox {
-      border-color: var(--invalid-color-pressed);
-    }
-
-    &[data-selected],
-    &[data-indeterminate] {
-      .checkbox {
-        background: var(--invalid-color);
-      }
-
-      &[data-pressed] .checkbox {
-        background: var(--invalid-color-pressed);
-      }
-    }
-  }
-
-  &[data-disabled] {
-    color: var(--text-color-disabled);
-
-    .checkbox {
-      border-color: var(--border-color-disabled);
     }
   }
 }

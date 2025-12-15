@@ -1,6 +1,6 @@
 import { DialogTrigger, Modal, Dialog as RACDialog } from 'react-aria-components'
 import { type ReactNode, useMemo } from 'react'
-import { Button } from '@/components/atoms/button/Button'
+import { Button } from '@/components/design-system/atoms/button/Button'
 import clsx from 'clsx'
 import { useBreakpoint } from '@/hooks/useBreakpoint'
 import styles from './Dialog.module.scss'
@@ -13,11 +13,8 @@ type DialogProps = {
   component?: ReactNode
   children?: ReactNode
   isOpen: boolean
-  displayCloseButton?: boolean
-  onClose?: () => void
   width?: string
-  blurry?: boolean
-  noPadding?: boolean
+  onClose?: () => void
 }
 
 export const Dialog = ({
@@ -27,9 +24,7 @@ export const Dialog = ({
   className,
   component,
   isOpen = false,
-  displayCloseButton = false,
   width,
-  noPadding,
   onClose,
 }: DialogProps) => {
   const { isMobile } = useBreakpoint()
@@ -55,17 +50,14 @@ export const Dialog = ({
                   {title && <h4 className={styles['o-dialog__title']}>{title}</h4>}
                   {subtitle && <p className={styles['o-dialog__subtitle']}>{subtitle}</p>}
                 </div>
-                {displayCloseButton && (
-                  <Button onPress={onClose} variant="icon">
-                    <X />
-                  </Button>
-                )}
+                <Button onPress={onClose} variant="icon">
+                  <X />
+                </Button>
               </header>
               <div
                 className={clsx(
                   styles['o-dialog__component-wrapper'],
                   width && styles['o-dialog__component-wrapper--fixed-width'],
-                  noPadding && styles['o-dialog__component-wrapper--no-padding'],
                 )}
               >
                 {component}

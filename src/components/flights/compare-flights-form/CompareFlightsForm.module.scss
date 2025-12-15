@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: ptr(16px);
   padding: ptr(16px, 0);
+
   @media #{$tablet} {
     padding: ptr(24px, 0);
   }

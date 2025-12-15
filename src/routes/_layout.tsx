@@ -3,9 +3,7 @@ import styles from './_layout.module.scss'
 
 const Layout = () => (
   <div className={styles['l-layout']}>
-    <>
-      <Outlet />
-    </>
+    <Outlet />
   </div>
 )
 

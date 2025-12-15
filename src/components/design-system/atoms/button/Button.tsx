@@ -1,9 +1,9 @@
 import { composeRenderProps, Button as RACButton, type ButtonProps } from 'react-aria-components'
-import { ProgressCircle } from '@/components/atoms/progress-circle/ProgressCircle'
+import { ProgressCircle } from '@/components/design-system/atoms/progress-circle/ProgressCircle'
 import clsx from 'clsx'
 import styles from './Button.module.scss'
 
-type ButtonVariant = 'primary' | 'secondary' | 'icon'
+type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'icon'
 type ButtonWidth = 'full' | 'auto'
 
 interface ButtonPropsWithVariant extends ButtonProps {

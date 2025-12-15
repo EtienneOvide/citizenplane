@@ -1,4 +1,4 @@
-.o-compare-flights-information {
+.o-compare-flights-review {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -10,14 +10,14 @@
     justify-content: space-between;
     background: var(--grey-100);
     border-bottom: ptr(1px) solid var(--grey-200);
-    padding: ptr(0, 16px);
+    padding: ptr(2px, 16px);
 
     @media #{$tablet} {
-      padding: ptr(0, 24px);
+      padding: ptr(2px, 24px);
     }
 
     @media #{$desktop} {
-      padding: ptr(0, 32px);
+      padding: ptr(2px, 32px);
     }
   }
 
@@ -43,57 +43,12 @@
     }
   }
 
-  &__details{
-    display: flex;
-    flex-direction: column;
-    gap: ptr(16px);
-    padding: ptr(16px);
-
-    @media #{$tablet} {
-      padding: ptr(16px, 24px);
-    }
-
-    @media #{$desktop} {
-      padding: ptr(16px, 32px);
-    }
-  }
-
-  &__detail {
-    display: flex;
-    flex-direction: column;
-    gap: ptr(4px);
-  }
-  
-  &__label{
-    color: var(--grey-600);
-  }
-
-  &__value-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: ptr(8px);
-    
-  }
-
-  &__value {
-    flex: 1 1 50%;
-    border-radius: ptr(8px);
-    padding: ptr(8px, 12px);
-    &--previous{
-      background-color: var(--red-200);
-    }
-    &--compare{
-      background-color: var(--green-200);
-    }
-  }
-
   &__actions {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: ptr(1px) solid var(--grey-200);
-    padding: ptr( 16px);
+    padding: ptr(16px);
 
     @media #{$tablet} {
       padding: ptr(24px);

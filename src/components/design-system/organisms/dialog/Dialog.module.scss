@@ -43,18 +43,20 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: ptr(16px);
-    padding: ptr(8px);
     border-bottom: ptr(1px) solid var(--grey-200);
+    padding: ptr(8px, 16px);
+
     @media #{$tablet} {
-      padding: ptr(16px);
+      padding: ptr(16px, 24px);
     }
 
     @media #{$desktop} {
-      padding: ptr(24px);
+      padding: ptr(24px, 32px);
     }
+
   }
 
-  &__header-text{
+  &__header-text {
     display: flex;
     flex-direction: column;
   }

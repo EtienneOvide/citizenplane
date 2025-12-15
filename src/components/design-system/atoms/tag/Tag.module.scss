@@ -2,11 +2,13 @@
   border-radius: ptr(4px);
   padding: ptr(0, 4px);
   width: fit-content;
+
   &--disabled {
     text-decoration: line-through;
     background-color: var(--grey-200);
     color: var(--grey-500);
   }
+
   &--error {
     text-decoration: line-through;
     background-color: var(--red-300);

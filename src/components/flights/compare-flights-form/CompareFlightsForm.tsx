@@ -1,10 +1,10 @@
-import { Tag } from '@/components/atoms/tag/Tag'
+import { Tag } from '@/components/design-system/atoms/tag/Tag'
 import { Form, Separator } from 'react-aria-components'
 import z from 'zod'
 import { Controller, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Button } from '@/components/atoms/button/Button'
-import { TextField } from '@/components/molecules/text-field/TextField'
+import { Button } from '@/components/design-system/atoms/button/Button'
+import { TextField } from '@/components/design-system/molecules/text-field/TextField'
 import useCompareFlightsStore from '@/stores/compareFlights'
 import styles from './CompareFlightsForm.module.scss'
 import { useFlights } from '@/hooks/useFlights'
@@ -20,6 +20,11 @@ export const CompareFlightsForm = () => {
   const { flightId, setFlightIdToCompare } = useCompareFlightsStore()
   const { flights } = useFlights()
 
+  const flightNumber = useMemo(
+    () => flights?.find(({ flight_id }) => flight_id === flightId)?.flight_number,
+    [flightId, flights],
+  )
+
   const {
     handleSubmit,
     control,
@@ -32,17 +37,19 @@ export const CompareFlightsForm = () => {
     },
   })
 
-  const flightNumber = useMemo(
-    () => flights?.find(({ flight_id }) => flight_id === flightId)?.flight_number,
-    [flightId, flights],
-  )
-
   const onSubmit = async (data: CompareFlightFormData) => {
     const foundFlight = flights?.find(({ flight_number }) => flight_number === data.flight_number)
     if (!foundFlight) {
       setError('flight_number', {
         type: 'manual',
         message: 'Flight not found',
+      })
+      return
+    }
+    if (foundFlight.flight_id === flightId) {
+      setError('flight_number', {
+        type: 'manual',
+        message: 'Cannot compare same flight',
       })
       return
     }
